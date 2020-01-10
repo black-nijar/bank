@@ -1,4 +1,4 @@
-import { CREDIT_AMOUNT } from "../actions/actionType";
+import { CREDIT_AMOUNT, DEBIT_AMOUNT } from "../actions/actionType";
 
 const initState = {
   totalAmount: 10000
@@ -10,6 +10,11 @@ const bankReducer = (state = initState, action) => {
         ...state,
         totalAmount: state.totalAmount + 10000
       }
+    case DEBIT_AMOUNT:
+        return {
+          ...state,
+          totalAmount: state.totalAmount - 10000
+        }
     default:
       return state;
   }

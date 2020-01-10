@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { creditAmount } from './actions/actions'
+import { creditAmount, debitAmount } from './actions/actions'
 
 class Bank extends Component {
   render() {
@@ -8,6 +8,7 @@ class Bank extends Component {
     return (
       <div className='app'>
         <h3>Welcome</h3>
+        <h2> Your bank balance is  {totalAmount}</h2><br/>
         <div>
           <div>
             <button
@@ -16,9 +17,17 @@ class Bank extends Component {
             >
               Credit amount -10000
             </button>
+          </div><br/>
+          <div>
+            <button
+              className='btn btn-info'
+              onClick={() => this.props.debitAmount()}
+            >
+              Debit amount -10000
+            </button>
           </div>
         </div>
-        <h2> Your bank balance is- {totalAmount}</h2>
+      
       </div>
     )
   }
@@ -29,4 +38,4 @@ const mapStateToProps = state => {
     amount: state.totalAmount
   }
 }
-export default connect(mapStateToProps,{creditAmount})(Bank)
+export default connect(mapStateToProps,{creditAmount, debitAmount})(Bank)

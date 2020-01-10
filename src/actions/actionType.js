@@ -1,1 +1,2 @@
 export const CREDIT_AMOUNT = 'CREDIT_AMOUNT'
+export const DEBIT_AMOUNT = 'DEBIT_AMOUNT'
