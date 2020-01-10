@@ -1,13 +1,13 @@
-import React, { Component } from 'react'
+import React from 'react'
+import './App.css'
+import Bank from './Bank';
 
-class App extends Component {
-  render() {
-    return (
-      <div>
-        Welcome
-      </div>
-    )
-  }
+const App = () => {
+  return (
+    <div>
+      <Bank/>
+    </div>
+  )
 }
 
 export default App
