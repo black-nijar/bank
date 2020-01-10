@@ -1,11 +1,12 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+------
 steps:
-npx create-react-app bank
-cd bank
-npm start
-git init 
-git commits
-npm i redux react-redux
+#npx create-react-app bank
+#cd bank
+#npm start
+#git init 
+#git commits
+#npm i redux react-redux
 
 ## Available Scripts
 
