@@ -1,4 +1,4 @@
-import { CREDIT_AMOUNT, DEBIT_AMOUNT } from "./actionType";
+import { CREDIT_AMOUNT, DEBIT_AMOUNT, CHARITY_AMOUNT } from "./actionType";
 
 export const creditAmount = () => {
   return {
@@ -9,5 +9,11 @@ export const creditAmount = () => {
 export const debitAmount = () => {
   return {
     type: DEBIT_AMOUNT
+  }
+}
+
+export const charityAmount = () => {
+  return {
+    type: CHARITY_AMOUNT
   }
 }

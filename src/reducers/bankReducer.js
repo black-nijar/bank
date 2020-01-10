@@ -1,20 +1,22 @@
-import { CREDIT_AMOUNT, DEBIT_AMOUNT } from "../actions/actionType";
+import { CREDIT_AMOUNT, DEBIT_AMOUNT, CHARITY_AMOUNT } from "../actions/actionType";
 
 const initState = {
-  totalAmount: 10000
+  totalAmount: 100000
 }
 const bankReducer = (state = initState, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case CREDIT_AMOUNT:
       return {
-        ...state,
         totalAmount: state.totalAmount + 10000
       }
     case DEBIT_AMOUNT:
-        return {
-          ...state,
-          totalAmount: state.totalAmount - 10000
-        }
+      return {
+        totalAmount: state.totalAmount - 10000
+      }
+    case CHARITY_AMOUNT:
+      return {
+        totalAmount: state.totalAmount - state.totalAmount
+      }
     default:
       return state;
   }
